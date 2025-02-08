@@ -37,15 +37,3 @@
 
 - **Auto-Save & Multi-Page Navigation:**  
   Game progress is automatically saved every 5 seconds and before the page unloads. Use the header navigation links to switch seamlessly between Farming, Upgrades, and Shop pages.
-
-## Project Structure
-virtual-farmer/
-├── index.html              # Main page: Farming and Inventory view
-├── upgrades.html           # Upgrades page (with pagination)
-├── shop.html               # Main Shop menu page (links to Hoe and Fertilizer shops)
-├── shop-hoe.html           # Hoe Shop page (with pagination and equip functionality)
-├── shop-fertilizer.html    # Fertilizer Shop page (with pagination)
-├── style.css               # Global styles and responsive design
-├── game.js                 # Game logic, state management, and event listeners
-├── README.md               # Project documentation and usage instructions
-└── LICENSE                 # License file

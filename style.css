@@ -1,0 +1,129 @@
+/* style.css */
+
+/* Global & Modern UI Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #283048, #859398);
+  color: #333;
+}
+header {
+  background: #fff;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+header a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+#game-container {
+  max-width: 1100px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+h1, h2, h3 {
+  text-align: center;
+  margin: 10px 0;
+  font-weight: 600;
+}
+#stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+#stats div { margin: 5px; }
+hr {
+  border: none;
+  height: 2px;
+  background: #ddd;
+  margin: 20px 0;
+}
+.section {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+/* Container untuk pilihan (dropdown) dan tombol utama di Farming */
+.choice-container, .button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+/* Layout Grid untuk Item Containers (Upgrade & Shop) */
+.item-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.shop-header {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Navigation dan Pagination untuk halaman Upgrade & Shop */
+.nav-container, .pagination {
+  text-align: center;
+  margin: 10px 0;
+}
+.pagination button {
+  margin: 0 5px;
+}
+
+/* Styling untuk tombol dan dropdown */
+button {
+  padding: 8px 16px;
+  border: none;
+  background: #28a745;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+button:hover:not(:disabled) {
+  background: #218838;
+}
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+select {
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .item-container {
+    grid-template-columns: 1fr;
+  }
+  #stats {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Virtual Farmer - Farming</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">Farming</a>
+    <a href="upgrades.html">Upgrades</a>
+    <a href="shop.html">Shop</a>
+  </header>
+  <div id="game-container">
+    <h1>Virtual Farmer</h1>
+    <!-- Stats Section -->
+    <div id="stats">
+      <div>Balance: $<span id="balance">0.00</span></div>
+      <div>XP: <span id="xp">0</span></div>
+      <div>Total Plants: <span id="plants">0</span></div>
+      <div>Current Hoe: <span id="currentHoe">Wooden Hoe</span></div>
+    </div>
+    <hr>
+    <!-- Farming Section -->
+    <div id="farming-section" class="section">
+      <h2>Farming</h2>
+      <div class="choice-container">
+        <div>
+          <label for="fertilizer-select">Choose Fertilizer:</label>
+          <select id="fertilizer-select"></select>
+        </div>
+        <div>
+          <label for="hoe-select">Choose Hoe:</label>
+          <select id="hoe-select"></select>
+        </div>
+      </div>
+      <div class="button-container">
+        <button id="farm-button" onclick="startFarm()">Farm</button>
+        <button id="sell-button" onclick="startSell()">Sell All Plants</button>
+      </div>
+    </div>
+    <hr>
+    <!-- Inventory Section -->
+    <div id="inventory-section" class="section">
+      <h2>Inventory</h2>
+      <div id="inventory-list"></div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Virtual Farmer - Upgrades</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">Farming</a>
+    <a href="upgrades.html">Upgrades</a>
+    <a href="shop.html">Shop</a>
+  </header>
+  <div id="game-container">
+    <h1>Upgrades</h1>
+    <div id="upgrade-list-container">
+      <!-- Daftar upgrade akan dirender di sini -->
+    </div>
+    <div class="pagination">
+      <button id="upgrade-prev-button">Previous</button>
+      <span id="upgrade-page-number"></span>
+      <button id="upgrade-next-button">Next</button>
+    </div>
+  </div>
+  <script src="game.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderUpgradesPage();
+    });
+  </script>
+</body>
+</html>

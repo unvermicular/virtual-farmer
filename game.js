@@ -375,7 +375,7 @@ function farm() {
   }
 
   plantYield += getUpgradeEffectiveness() * (
-    game.upgrades.sharperTools + game.upgrades.automatedSprinkler,
+    game.upgrades.sharperTools + game.upgrades.automatedSprinkler
   );
   plantYield = Math.floor(
     plantYield * (1 + 0.2 * getUpgradeEffectiveness() * game.upgrades.irrigationSystem),

@@ -6,28 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-    <a href="index.html">Farming</a>
-    <a href="upgrades.html">Upgrades</a>
-    <a href="shop.html">Shop</a>
+<body class="page-upgrades">
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-icon" aria-hidden="true">🌱</span>
+      <span class="brand-name">Virtual Farmer</span>
+    </div>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="nav-link" data-page="page-index" href="index.html">Farming</a>
+      <a class="nav-link" data-page="page-upgrades" href="upgrades.html">Upgrades</a>
+      <a class="nav-link" data-page="page-shop-overview" href="shop.html">Shop</a>
+    </nav>
   </header>
-  <div id="game-container">
-    <h1>Upgrades</h1>
-    <div id="upgrade-list-container">
-      <!-- Daftar upgrade akan dirender di sini -->
-    </div>
-    <div class="pagination">
-      <button id="upgrade-prev-button">Previous</button>
-      <span id="upgrade-page-number"></span>
-      <button id="upgrade-next-button">Next</button>
-    </div>
-  </div>
+  <main class="page-content">
+    <section class="panel" aria-labelledby="upgrades-heading">
+      <div class="panel-header">
+        <h1 id="upgrades-heading">Upgrades</h1>
+        <p>Invest in new technologies to increase yield, profits, and efficiency.</p>
+      </div>
+      <div id="upgrade-list-container" class="list-stack" aria-live="polite"></div>
+      <div class="pagination" aria-label="Upgrade navigation">
+        <button id="upgrade-prev-button" type="button">Previous</button>
+        <span id="upgrade-page-number" class="pagination-indicator">Page 1</span>
+        <button id="upgrade-next-button" type="button">Next</button>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>Keep upgrading to cultivate the most productive farm in the region.</p>
+  </footer>
   <script src="game.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      renderUpgradesPage();
-    });
-  </script>
 </body>
 </html>

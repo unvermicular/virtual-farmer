@@ -6,19 +6,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-    <a href="index.html">Farming</a>
-    <a href="upgrades.html">Upgrades</a>
-    <a href="shop.html">Shop</a>
-  </header>
-  <div id="game-container">
-    <h1>Shop</h1>
-    <div class="button-container">
-      <a href="shop-hoe.html"><button>Hoe Shop</button></a>
-      <a href="shop-fertilizer.html"><button>Fertilizer Shop</button></a>
+<body class="page-shop-overview">
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-icon" aria-hidden="true">🌱</span>
+      <span class="brand-name">Virtual Farmer</span>
     </div>
-  </div>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="nav-link" data-page="page-index" href="index.html">Farming</a>
+      <a class="nav-link" data-page="page-upgrades" href="upgrades.html">Upgrades</a>
+      <a class="nav-link" data-page="page-shop-overview" href="shop.html">Shop</a>
+    </nav>
+  </header>
+  <main class="page-content">
+    <section class="panel" aria-labelledby="shop-heading">
+      <div class="panel-header">
+        <h1 id="shop-heading">Shop</h1>
+        <p>Expand your toolkit by purchasing better hoes and nutrient-rich fertilizers.</p>
+      </div>
+      <div class="link-grid">
+        <a class="link-card" href="shop-hoe.html">
+          <h2>Hoe Shop</h2>
+          <p>Upgrade your hoe collection to harvest more valuable crops.</p>
+        </a>
+        <a class="link-card" href="shop-fertilizer.html">
+          <h2>Fertilizer Shop</h2>
+          <p>Stock up on fertilizers that boost yield and unlock rare plants.</p>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>Smart investments today power tomorrow's harvest.</p>
+  </footer>
   <script src="game.js"></script>
 </body>
 </html>

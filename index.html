@@ -6,47 +6,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-    <a href="index.html">Farming</a>
-    <a href="upgrades.html">Upgrades</a>
-    <a href="shop.html">Shop</a>
+<body class="page-index">
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-icon" aria-hidden="true">🌱</span>
+      <span class="brand-name">Virtual Farmer</span>
+    </div>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+    </button>
+    <nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
+      <a class="nav-link" data-page="page-index" href="index.html">Farming</a>
+      <a class="nav-link" data-page="page-upgrades" href="upgrades.html">Upgrades</a>
+      <a class="nav-link" data-page="page-shop-overview" href="shop.html">Shop</a>
+    </nav>
   </header>
-  <div id="game-container">
-    <h1>Virtual Farmer</h1>
-    <!-- Stats Section -->
-    <div id="stats">
-      <div>Balance: $<span id="balance">0.00</span></div>
-      <div>XP: <span id="xp">0</span></div>
-      <div>Total Plants: <span id="plants">0</span></div>
-      <div>Current Hoe: <span id="currentHoe">Wooden Hoe</span></div>
-    </div>
-    <hr>
-    <!-- Farming Section -->
-    <div id="farming-section" class="section">
-      <h2>Farming</h2>
-      <div class="choice-container">
-        <div>
-          <label for="fertilizer-select">Choose Fertilizer:</label>
-          <select id="fertilizer-select"></select>
+  <main class="page-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h1 id="hero-title">Grow a thriving digital farm</h1>
+        <p>Optimize your tools, invest in upgrades, and cultivate high-value crops to expand your farming empire.</p>
+      </div>
+    </section>
+    <section class="panel stats-panel" aria-labelledby="stats-heading">
+      <div class="panel-header">
+        <h2 id="stats-heading">Farm Overview</h2>
+        <p>Track your key farming metrics in real time.</p>
+      </div>
+      <div id="stats" class="stats-grid">
+        <article class="stat-card" aria-live="polite">
+          <span class="stat-label">Balance</span>
+          <span class="stat-value" id="balance">$0.00</span>
+        </article>
+        <article class="stat-card" aria-live="polite">
+          <span class="stat-label">Experience</span>
+          <span class="stat-value" id="xp">0</span>
+        </article>
+        <article class="stat-card" aria-live="polite">
+          <span class="stat-label">Total Plants</span>
+          <span class="stat-value" id="plants">0</span>
+        </article>
+        <article class="stat-card" aria-live="polite">
+          <span class="stat-label">Equipped Hoe</span>
+          <span class="stat-value" id="currentHoe">Wooden Hoe</span>
+        </article>
+      </div>
+    </section>
+    <section id="farming-section" class="panel" aria-labelledby="farming-heading">
+      <div class="panel-header">
+        <h2 id="farming-heading">Farming Controls</h2>
+        <p>Select your farming tools and start harvesting.</p>
+      </div>
+      <div class="controls-grid">
+        <div class="control-card">
+          <label class="control-label" for="fertilizer-select">Choose Fertilizer</label>
+          <select id="fertilizer-select" class="input-control"></select>
+          <p class="control-helper">Unlock more fertilizers in the shop to boost your yield.</p>
         </div>
-        <div>
-          <label for="hoe-select">Choose Hoe:</label>
-          <select id="hoe-select"></select>
+        <div class="control-card">
+          <label class="control-label" for="hoe-select">Choose Hoe</label>
+          <select id="hoe-select" class="input-control"></select>
+          <p class="control-helper">Equip the best hoe you own to maximize plant quality.</p>
         </div>
       </div>
-      <div class="button-container">
-        <button id="farm-button" onclick="startFarm()">Farm</button>
-        <button id="sell-button" onclick="startSell()">Sell All Plants</button>
+      <div class="button-group">
+        <button id="farm-button" type="button">Start Farming</button>
+        <button id="sell-button" type="button" class="button-secondary">Sell All Plants</button>
       </div>
-    </div>
-    <hr>
-    <!-- Inventory Section -->
-    <div id="inventory-section" class="section">
-      <h2>Inventory</h2>
-      <div id="inventory-list"></div>
-    </div>
-  </div>
+    </section>
+    <section id="inventory-section" class="panel" aria-labelledby="inventory-heading">
+      <div class="panel-header">
+        <h2 id="inventory-heading">Inventory</h2>
+        <p>Review your latest harvest and plan your next move.</p>
+      </div>
+      <div id="inventory-list" class="inventory-grid">
+        <p class="empty-state">Your inventory is empty. Start farming to fill it with crops.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>Manage your resources wisely to become the ultimate virtual farmer.</p>
+  </footer>
   <script src="game.js"></script>
 </body>
 </html>

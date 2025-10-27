@@ -6,30 +6,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-    <a href="index.html">Farming</a>
-    <a href="upgrades.html">Upgrades</a>
-    <a href="shop.html">Shop</a>
+<body class="page-shop-hoe">
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-icon" aria-hidden="true">🌱</span>
+      <span class="brand-name">Virtual Farmer</span>
+    </div>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+    </button>
+    <nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
+      <a class="nav-link" data-page="page-index" href="index.html">Farming</a>
+      <a class="nav-link" data-page="page-upgrades" href="upgrades.html">Upgrades</a>
+      <a class="nav-link" data-page="page-shop-overview" href="shop.html">Shop</a>
+    </nav>
   </header>
-  <div id="game-container">
-    <h1>Hoe Shop</h1>
-    <div id="shop-list-container">
-      <!-- Item Hoe akan dirender di sini -->
-    </div>
-    <div class="pagination">
-      <button id="shop-prev-button">Previous</button>
-      <span id="shop-page-number"></span>
-      <button id="shop-next-button">Next</button>
-    </div>
-  </div>
+  <main class="page-content">
+    <section class="panel" aria-labelledby="hoe-shop-heading">
+      <div class="panel-header">
+        <h1 id="hoe-shop-heading">Hoe Shop</h1>
+        <p>Purchase stronger hoes to access rare crops and higher yields.</p>
+      </div>
+      <div id="shop-list-container" class="list-stack" aria-live="polite"></div>
+      <div class="pagination" aria-label="Hoe pagination">
+        <button id="shop-prev-button" type="button">Previous</button>
+        <span id="shop-page-number" class="pagination-indicator">Page 1</span>
+        <button id="shop-next-button" type="button">Next</button>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>Equip the right tools to turn every planting into a success.</p>
+  </footer>
   <script src="game.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      currentShopTab = "hoe";
-      currentShopPage = 1;
-      renderShopPage();
-    });
-  </script>
 </body>
 </html>
